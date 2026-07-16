@@ -16,7 +16,7 @@ const roles = [
   "mechanical engineer.",
   "robotics engineer.",
   "product designer",
-  "manufacturing/production engineer."
+  "builder of electromechanical systems."
 ];
 
 const typedRole = document.querySelector("#typed-role");
