@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resume for Kian Teymouri">
+  <title>Resume | Kian Teymouri</title>
+
+  <script>
+    (() => {
+      const saved = localStorage.getItem("portfolio-theme");
+      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (saved === "dark" || (!saved && dark)) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="resume-pdf-page">
+  <header class="site-header">
+    <a class="brand" href="index.html">KT</a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html" aria-current="page">Resume</a>
+    </nav>
+
+    <a class="resume-download-link" href="assets/resume.pdf" download>
+      Download PDF
+    </a>
+
+    <button
+      class="theme-toggle inline-toggle"
+      type="button"
+      aria-label="Toggle color theme"
+    >
+      ◐
+    </button>
+  </header>
+
+  <main class="pdf-viewer-shell">
+    <object
+      class="pdf-viewer"
+      data="assets/resume.pdf"
+      type="application/pdf"
+      aria-label="Kian Teymouri resume"
+    >
+      <div class="pdf-fallback">
+        <h1>Kian Teymouri Resume</h1>
+        <p>
+          Your browser could not display the embedded PDF.
+        </p>
+        <a class="outline-button" href="assets/resume.pdf">
+          Open Resume PDF
+        </a>
+      </div>
+    </object>
+  </main>
+</body>
+</html>
