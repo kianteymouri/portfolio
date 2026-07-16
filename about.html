@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (() => {
+      const saved = localStorage.getItem("portfolio-theme");
+      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (saved === "dark" || (!saved && dark)) document.documentElement.dataset.theme = "dark";
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <meta name="description" content="About Your Name">
+  <title>About | Your Name</title>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">YN</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+    <button class="theme-toggle inline-toggle" type="button" aria-label="Toggle color theme">◐</button>
+  </header>
+  <main class="page-shell">
+    <section class="page-intro">
+      <p class="eyebrow">About</p>
+      <h1>I build intelligent systems that connect software to the physical world.</h1>
+      <p class="lede">Replace this text with a short introduction about your interests, education, and the kinds of problems you enjoy solving.</p>
+    </section>
+
+    <section class="about-grid">
+      <article class="panel">
+        <h2>Background</h2>
+        <p>I am a computer science student focused on machine learning, robotics, perception, and reliable software systems.</p>
+        <p>My work spans autonomous vehicles, computer vision, simulation, embedded systems, and full-stack development.</p>
+      </article>
+
+      <article class="panel">
+        <h2>Currently exploring</h2>
+        <ul class="clean-list">
+          <li>Robot perception and autonomy</li>
+          <li>Vision-language-action models</li>
+          <li>Simulation and motion planning</li>
+          <li>Production ML infrastructure</li>
+        </ul>
+      </article>
+
+      <article class="panel wide-panel">
+        <h2>Toolbox</h2>
+        <div class="tag-list">
+          <span>Python</span><span>C++</span><span>ROS 2</span><span>PyTorch</span>
+          <span>OpenCV</span><span>Linux</span><span>Docker</span><span>FastAPI</span>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

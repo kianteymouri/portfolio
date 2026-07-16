@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Engineering and software portfolio">
+  <title>Your Name | Portfolio</title>
+  <script>
+    (() => {
+      const saved = localStorage.getItem("portfolio-theme");
+      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (saved === "dark" || (!saved && dark)) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="landing-page">
+  <div class="grid-background" aria-hidden="true">
+    <div class="grid-base"></div>
+    <div class="grid-glow"></div>
+  </div>
+
+  <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+    <span class="theme-icon" aria-hidden="true">◐</span>
+  </button>
+
+  <main class="landing-shell">
+    <section class="landing-copy">
+      <p class="name-label">YOUR NAME</p>
+      <p class="location">⌖ San Diego, CA</p>
+
+      <div class="role-line">
+        <span>I'm a&nbsp;</span>
+        <span id="typed-role" class="typed-role"></span>
+        <span class="typing-cursor" aria-hidden="true"></span>
+      </div>
+
+      <nav class="landing-nav" aria-label="Main pages">
+        <a class="outline-button" href="about.html">About Me</a>
+        <a class="outline-button" href="projects.html">Projects</a>
+        <a class="outline-button" href="resume.html">Resume</a>
+      </nav>
+    </section>
+  </main>
+
+  <svg class="corner-doodle doodle-top" viewBox="0 0 420 420" role="img" aria-label="Original rocket doodle">
+    <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M210 50c55 42 76 115 54 192l-54 82-54-82c-22-77-1-150 54-192Z"/>
+      <circle cx="210" cy="151" r="28"/>
+      <path d="m158 229-58 41 18-87 45-23M262 229l58 41-18-87-45-23"/>
+      <path d="m182 320-18 51 46-29 46 29-18-51"/>
+      <path d="M192 75h36"/>
+      <path d="M190 188h40"/>
+    </g>
+  </svg>
+
+  <svg class="corner-doodle doodle-bottom" viewBox="0 0 520 340" role="img" aria-label="Original rover doodle">
+    <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M55 270h410"/>
+      <circle cx="155" cy="262" r="41"/>
+      <circle cx="370" cy="262" r="41"/>
+      <path d="M119 225h287l-39-95H178Z"/>
+      <path d="M217 130V84h102v46"/>
+      <path d="m240 84 19-30h20l19 30"/>
+      <circle cx="267" cy="109" r="8"/>
+      <path d="M205 166h159M221 194h127"/>
+      <path d="M367 129h51l31 31-29 27h-34"/>
+      <path d="m449 160 26-14M450 163l28 7"/>
+    </g>
+  </svg>
+</body>
+</html>
