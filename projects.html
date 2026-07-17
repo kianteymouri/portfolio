@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mechanical, electrical, CAD, and carpentry projects by Kian Teymouri">
+  <title>Projects | Kian Teymouri</title>
+  <script>
+    (() => {
+      const saved = localStorage.getItem("portfolio-theme");
+      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (saved === "dark" || (!saved && dark)) document.documentElement.dataset.theme = "dark";
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">KT</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="about.html">About</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+    <button class="theme-toggle inline-toggle" type="button" aria-label="Toggle color theme">◐</button>
+  </header>
+
+  <main class="page-shell projects-page">
+    <section class="page-intro projects-intro">
+      <p class="eyebrow">Selected work</p>
+      <h1>Projects</h1>
+      <p class="lede">Mechanical, electrical, CAD, and carpentry projects built through hands-on design, prototyping, fabrication, and testing.</p>
+    </section>
+
+    <div class="project-filter-tabs" role="tablist" aria-label="Filter projects">
+      <button class="project-filter active" type="button" data-filter="all">All</button>
+      <button class="project-filter" type="button" data-filter="mechanical">Mechanical</button>
+      <button class="project-filter" type="button" data-filter="electrical">Electrical</button>
+      <button class="project-filter" type="button" data-filter="cad">CAD</button>
+      <button class="project-filter" type="button" data-filter="carpentry">Carpentry</button>
+    </div>
+
+    <section class="project-category" data-category="mechanical">
+      <div class="project-category-heading"><span>Mechanical</span><div></div></div>
+      <div class="oliver-project-grid">
+        <article class="oliver-project-card">
+          <div class="oliver-card-image"><img src="https://raw.githubusercontent.com/kianteymouri/kianteymouri.github.io/main/images/jag.JPG" alt="1989 Jaguar XJS restoration" loading="lazy"></div>
+          <div class="oliver-card-footer"><div><h2>Classic Car Restoration</h2><p>2021–Present · Automotive Engineering</p></div><span>↗</span></div>
+          <div class="oliver-card-details"><p>Restored a 1989 Jaguar XJS and 1980 GMC Sierra through mechanical teardown, fault diagnosis, electrical troubleshooting, bodywork, component sourcing, and subsystem rebuilding.</p><div class="tag-list compact"><span>Diagnostics</span><span>Automotive</span><span>Fabrication</span></div></div>
+        </article>
+        <article class="oliver-project-card">
+          <div class="oliver-card-image"><img src="https://raw.githubusercontent.com/kianteymouri/kianteymouri.github.io/main/images/bike.jpg" alt="Electric bicycle conversion" loading="lazy"></div>
+          <div class="oliver-card-footer"><div><h2>E-Bike Conversion</h2><p>2025 · Mechanical & Electrical Integration</p></div><span>↗</span></div>
+          <div class="oliver-card-details"><p>Converted a standard bicycle into an electric-assisted vehicle, integrating the motor, battery, power electronics, mounting hardware, and wiring while accounting for vibration, structural safety, and road use.</p><div class="tag-list compact"><span>Vehicle Design</span><span>Powertrain</span><span>Integration</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-category" data-category="electrical">
+      <div class="project-category-heading"><span>Electrical</span><div></div></div>
+      <div class="oliver-project-grid">
+        <article class="oliver-project-card">
+          <div class="oliver-card-image portrait-image"><img src="https://raw.githubusercontent.com/kianteymouri/kianteymouri.github.io/main/images/gif.gif" alt="Real-life Weasley Clock" loading="lazy"></div>
+          <div class="oliver-card-footer"><div><h2>Weasley Clock</h2><p>Raspberry Pi · Home Automation</p></div><span>↗</span></div>
+          <div class="oliver-card-details"><p>Built a location-tracking clock using a Raspberry Pi 4, stepper motor, custom 3D-printed components, Home Assistant, MQTT, Docker, and Python. Added shortest-path hand movement and automatic startup.</p><div class="tag-list compact"><span>Raspberry Pi</span><span>MQTT</span><span>Python</span></div></div>
+        </article>
+        <article class="oliver-project-card">
+          <div class="oliver-card-image"><img src="https://raw.githubusercontent.com/kianteymouri/kianteymouri.github.io/main/images/robotarm.png" alt="Low-cost robotic arm" loading="lazy"></div>
+          <div class="oliver-card-footer"><div><h2>Robotic Arm</h2><p>Arduino · Motion Tracking</p></div><span>↗</span></div>
+          <div class="oliver-card-details"><p>Designed, printed, and wired a low-cost robotic arm that tracked a user's movement through a webcam and reproduced the gestures using Arduino-controlled servos.</p><div class="tag-list compact"><span>Arduino</span><span>Servos</span><span>Computer Vision</span></div></div>
+        </article>
+        <article class="oliver-project-card">
+          <div class="oliver-card-image"><img src="https://raw.githubusercontent.com/kianteymouri/kianteymouri.github.io/main/images/cashreader.png" alt="Currency denomination reader" loading="lazy"></div>
+          <div class="oliver-card-footer"><div><h2>Currency Denomination Reader</h2><p>Raspberry Pi · Assistive Technology</p></div><a class="card-action" href="https://youtu.be/QZhnxAJW_ZM" target="_blank" rel="noopener noreferrer">Demo ↗</a></div>
+          <div class="oliver-card-details"><p>Developed an accessible currency reader with Infineon Technologies. A Raspberry Pi camera captures a bill, then OpenCV compares it with known U.S., Canadian, and British denominations.</p><div class="tag-list compact"><span>OpenCV</span><span>Raspberry Pi</span><span>Accessibility</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-category" data-category="cad">
+      <div class="project-category-heading"><span>CAD</span><div></div></div>
+      <div class="oliver-project-grid">
+        <article class="oliver-project-card">
+          <div class="oliver-card-image"><img src="https://raw.githubusercontent.com/kianteymouri/kianteymouri.github.io/main/images/sailbot.png" alt="Autonomous sailboat wind energy system" loading="lazy"></div>
+          <div class="oliver-card-footer"><div><h2>Autonomous Sailbot Wind Energy</h2><p>2025 · TAFLAB Research</p></div><a class="card-action" href="https://taflab.berkeley.edu/" target="_blank" rel="noopener noreferrer">TAFLAB ↗</a></div>
+          <div class="oliver-card-details"><p>Designed and fabricated wind-energy conversion hardware for autonomous sailboats, including vertical-axis turbine concepts, mounts, connectors, a modular gearbox, test hardware, and supporting circuitry.</p><div class="mini-image-row"><img src="https://raw.githubusercontent.com/kianteymouri/kianteymouri.github.io/main/images/turbinemount.png" alt="CAD model of sailbot turbine mount" loading="lazy"></div><div class="tag-list compact"><span>SolidWorks</span><span>Prototyping</span><span>Wind Energy</span></div></div>
+        </article>
+        <article class="oliver-project-card">
+          <div class="oliver-card-image portrait-image"><img src="https://raw.githubusercontent.com/kianteymouri/kianteymouri.github.io/main/images/bottlecap2.png" alt="Fallout-themed stainless steel bottle opener" loading="lazy"></div>
+          <div class="oliver-card-footer"><div><h2>Nuka-Cola Bottle Opener</h2><p>Onshape · Sheet Metal Fabrication</p></div><span>↗</span></div>
+          <div class="oliver-card-details"><p>Created a Fallout-inspired bottle opener from concept through fabrication. Modeled it in Onshape, tested the geometry with a 3D-printed prototype, and cut the final design from 0.060-inch stainless steel.</p><div class="tag-list compact"><span>Onshape</span><span>FabLight</span><span>3D Printing</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-category" data-category="carpentry">
+      <div class="project-category-heading"><span>Carpentry</span><div></div></div>
+      <div class="oliver-project-grid">
+        <article class="oliver-project-card wide-project-card">
+          <div class="woodworking-image-grid"><img src="https://raw.githubusercontent.com/kianteymouri/kianteymouri.github.io/main/images/bench.png" alt="Hand-built community bench" loading="lazy"><img src="https://raw.githubusercontent.com/kianteymouri/kianteymouri.github.io/main/images/library.png" alt="Hand-built neighborhood little library" loading="lazy"></div>
+          <div class="oliver-card-footer"><div><h2>Community Woodworking Projects</h2><p>Carpentry · Community Service</p></div><span>↗</span></div>
+          <div class="oliver-card-details"><p>Built and donated three benches for bus stops, a neighborhood little free library, and a table for charity. These projects strengthened practical skills in measuring, cutting, joining, finishing, and designing durable work for public use.</p><div class="tag-list compact"><span>Woodworking</span><span>Fabrication</span><span>Community</span></div></div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
