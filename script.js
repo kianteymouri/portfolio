@@ -13,10 +13,10 @@ const year = document.querySelector("#year");
 if (year) year.textContent = new Date().getFullYear();
 
 const roles = [
-  "mechanical engineer.",
   "robotics engineer.",
-  "product designer",
-  "builder of electromechanical systems."
+  "machine learning engineer.",
+  "software developer.",
+  "builder of autonomous systems."
 ];
 
 const typedRole = document.querySelector("#typed-role");
@@ -70,5 +70,18 @@ document.addEventListener("pointermove", (event) => {
     const distance = Math.hypot(event.clientX - centerX, event.clientY - centerY);
     const radius = Math.max(230, rect.width * 1.05);
     doodle.style.opacity = Math.max(0, 1 - distance / radius);
+  });
+});
+
+// Project category filtering
+const projectFilterButtons = document.querySelectorAll(".project-filter");
+const projectCategories = document.querySelectorAll(".project-category");
+projectFilterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const selected = button.dataset.filter;
+    projectFilterButtons.forEach((item) => item.classList.toggle("active", item === button));
+    projectCategories.forEach((section) => {
+      section.hidden = selected !== "all" && section.dataset.category !== selected;
+    });
   });
 });
