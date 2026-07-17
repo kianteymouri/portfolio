@@ -451,3 +451,44 @@ button { font: inherit; }
     height: calc(100vh - 84px);
   }
 }
+
+/* Oliver-inspired categorized projects page */
+.projects-page { width: min(1180px, calc(100% - 40px)); }
+.projects-intro { margin-bottom: 38px; }
+.project-filter-tabs { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 66px; padding: 14px 0; background: color-mix(in srgb, var(--bg) 90%, transparent); border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); }
+.project-filter { padding: 10px 15px; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; font: 700 .72rem "Space Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+.project-filter:hover, .project-filter.active { border-color: var(--text); background: var(--text); color: var(--bg); }
+.project-category { margin-bottom: 86px; }
+.project-category[hidden] { display: none; }
+.project-category-heading { display: flex; align-items: center; gap: 20px; margin-bottom: 24px; }
+.project-category-heading span { flex: 0 0 auto; font: 700 .82rem "Space Mono", monospace; text-transform: uppercase; letter-spacing: .12em; }
+.project-category-heading div { width: 100%; height: 1px; background: var(--line); }
+.oliver-project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.oliver-project-card { overflow: hidden; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); transition: transform .2s ease, border-color .2s ease; }
+.oliver-project-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.oliver-card-image { height: 315px; overflow: hidden; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--bg) 82%, var(--text) 18%); }
+.oliver-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.oliver-project-card:hover .oliver-card-image img { transform: scale(1.035); }
+.oliver-card-image.portrait-image img { object-fit: contain; padding: 18px; }
+.oliver-card-footer { min-height: 92px; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 18px 20px; border-bottom: 1px solid var(--line); }
+.oliver-card-footer h2 { margin: 0 0 6px; font-size: 1.1rem; line-height: 1.25; }
+.oliver-card-footer p { margin: 0; color: var(--muted); font: 500 .69rem "Space Mono", monospace; }
+.oliver-card-footer > span { color: var(--accent); font-size: 1.25rem; }
+.card-action { flex: 0 0 auto; color: var(--accent); font: 700 .69rem "Space Mono", monospace; text-decoration: none; text-transform: uppercase; letter-spacing: .06em; }
+.oliver-card-details { padding: 22px 20px 24px; }
+.oliver-card-details > p { margin: 0 0 20px; color: var(--muted); line-height: 1.7; }
+.mini-image-row { margin: 0 0 20px; }
+.mini-image-row img { display: block; width: 100%; max-height: 210px; object-fit: contain; border: 1px solid var(--line); background: color-mix(in srgb, var(--bg) 88%, var(--text) 12%); }
+.wide-project-card { grid-column: 1 / -1; }
+.woodworking-image-grid { display: grid; grid-template-columns: repeat(2, 1fr); height: 390px; border-bottom: 1px solid var(--line); }
+.woodworking-image-grid img { width: 100%; height: 100%; object-fit: cover; }
+.woodworking-image-grid img + img { border-left: 1px solid var(--line); }
+@media (max-width: 760px) {
+  .project-filter-tabs { position: static; margin-bottom: 46px; }
+  .oliver-project-grid { grid-template-columns: 1fr; }
+  .wide-project-card { grid-column: auto; }
+  .oliver-card-image { height: 250px; }
+  .woodworking-image-grid { grid-template-columns: 1fr; height: auto; }
+  .woodworking-image-grid img { height: 245px; }
+  .woodworking-image-grid img + img { border-left: 0; border-top: 1px solid var(--line); }
+}
