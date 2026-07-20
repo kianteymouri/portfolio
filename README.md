@@ -1,4 +1,4 @@
-<a href="[https://example.com](https://kianteymouri.github.io/portfolio/)" target="_blank" rel="noopener noreferrer">My Portfolio Link</a>
+<a href="https://kianteymouri.github.io/portfolio/" target="_blank" rel="noopener noreferrer">My Portfolio Link</a>
 
 Link: https://kianteymouri.github.io/portfolio/
 
