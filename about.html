@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About Kian Teymouri, a UC Berkeley mechanical engineering student focused on building, autonomous systems, and hands-on design.">
+  <title>About | Kian Teymouri</title>
   <script>
     (() => {
       const saved = localStorage.getItem("portfolio-theme");
@@ -11,51 +13,77 @@
     })();
   </script>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="about.css">
   <script src="script.js" defer></script>
-  <meta name="description" content="About Your Name">
-  <title>About | Kian Teymouri</title>
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="index.html">KT</a>
     <nav class="site-nav" aria-label="Primary navigation">
-      <a href="about.html">About</a>
+      <a href="about.html" aria-current="page">About</a>
       <a href="projects.html">Projects</a>
       <a href="resume.html">Resume</a>
     </nav>
     <button class="theme-toggle inline-toggle" type="button" aria-label="Toggle color theme">◐</button>
   </header>
-  <main class="page-shell">
-    <section class="page-intro">
-      <p class="eyebrow">About</p>
-      <h1>I build intelligent systems that connect software to the physical world.</h1>
-      <p class="lede">Replace this text with a short introduction about your interests, education, and the kinds of problems you enjoy solving.</p>
+
+  <main class="page-shell about-page">
+    <section class="page-intro about-intro">
+      <p class="eyebrow">About me</p>
+      <h1>I build, test, repair, and improve things.</h1>
+      <p class="lede">I am a mechanical engineering student at UC Berkeley interested in autonomous systems, product design, vehicles, fabrication, and electromechanical projects.</p>
     </section>
 
-    <section class="about-grid">
-      <article class="panel">
-        <h2>Background</h2>
-        <p>I am a computer science student focused on machine learning, robotics, perception, and reliable software systems.</p>
-        <p>My work spans autonomous vehicles, computer vision, simulation, embedded systems, and full-stack development.</p>
-      </article>
+    <section class="about-story-section">
+      <div class="about-story-copy">
+        <p class="about-section-number">01</p>
+        <h2>My Path</h2>
+        <p>I grew up in the South Bay and began my college journey at community college before transferring to the University of California, Berkeley. I am now approaching my senior year in mechanical engineering.</p>
+        <p>Taking the community college route taught me to be resourceful, adaptable, and intentional about the opportunities I pursue. Transferring to Berkeley gave me the chance to expand those skills through engineering research, UAV coursework, teaching, student organizations, and increasingly complex design projects.</p>
+      </div>
+      <figure class="about-photo-slot">
+        <!-- Replace the placeholder below with: <img src="assets/about-berkeley.jpg" alt="Kian at UC Berkeley"> -->
+        <div class="photo-placeholder"><span>Photo 01</span><strong>Berkeley, graduation, or campus photo</strong><small>assets/about-berkeley.jpg</small></div>
+      </figure>
+    </section>
 
-      <article class="panel">
-        <h2>Currently exploring</h2>
-        <ul class="clean-list">
-          <li>Robot perception and autonomy</li>
-          <li>Vision-language-action models</li>
-          <li>Simulation and motion planning</li>
-          <li>Production ML infrastructure</li>
-        </ul>
-      </article>
+    <section class="about-story-section reverse-layout">
+      <div class="about-story-copy">
+        <p class="about-section-number">02</p>
+        <h2>Building Things</h2>
+        <p>I have always enjoyed making and repairing things. Some of my earliest experiences came from helping my dad with projects around the house and yard, where I learned to measure twice, accept mistakes, and finish what I started.</p>
+        <p>That mindset continues to shape how I approach engineering. My work has included restoring classic cars, converting a bicycle into an e-bike, designing renewable-energy hardware for autonomous sailboats, building a location-tracking clock, and creating furniture for my community.</p>
+      </div>
+      <figure class="about-photo-slot">
+        <!-- Replace the placeholder below with: <img src="assets/about-building.jpg" alt="Kian working on an engineering project"> -->
+        <div class="photo-placeholder"><span>Photo 02</span><strong>Working on a car, prototype, or shop project</strong><small>assets/about-building.jpg</small></div>
+      </figure>
+    </section>
 
-      <article class="panel wide-panel">
-        <h2>Toolbox</h2>
-        <div class="tag-list">
-          <span>Solidworks</span><span>Fusion360</span><span>OnShape</span><span>GD&T</span>
-          <span>DFMA</span><span>ANSYS</span><span>MATLAB</span></span><span>Python</span>
-        </div>
-      </article>
+    <section class="about-story-section">
+      <div class="about-story-copy">
+        <p class="about-section-number">03</p>
+        <h2>Community</h2>
+        <p>My Persian background is an important part of who I am and how I connect with others. At Berkeley, I serve as the Finance Director for ISCO, where I help support the organization’s events, operations, and community-building efforts.</p>
+        <p>Being involved with ISCO has allowed me to contribute outside the classroom while staying connected to Persian culture and helping create a welcoming space for other students.</p>
+      </div>
+      <figure class="about-photo-slot">
+        <!-- Replace the placeholder below with: <img src="assets/about-isco.jpg" alt="Kian with ISCO at UC Berkeley"> -->
+        <div class="photo-placeholder"><span>Photo 03</span><strong>ISCO event, Persian community, or group photo</strong><small>assets/about-isco.jpg</small></div>
+      </figure>
+    </section>
+
+    <section class="about-story-section reverse-layout">
+      <div class="about-story-copy">
+        <p class="about-section-number">04</p>
+        <h2>Outside Engineering</h2>
+        <p>When I am not working on a project, I enjoy sports, staying active, exploring new places, and spending time with friends and family. I like activities that keep me moving and give me a break from sitting behind a computer.</p>
+        <p>I am also a big food person. I enjoy trying new restaurants, discovering different cuisines, and finding places people might overlook. For me, food is one of the best ways to experience a culture and bring people together.</p>
+      </div>
+      <figure class="about-photo-slot">
+        <!-- Replace the placeholder below with: <img src="assets/about-life.jpg" alt="Kian playing sports or trying new food"> -->
+        <div class="photo-placeholder"><span>Photo 04</span><strong>Sports, hiking, travel, friends, or food</strong><small>assets/about-life.jpg</small></div>
+      </figure>
     </section>
   </main>
 </body>
