@@ -13,10 +13,10 @@ const year = document.querySelector("#year");
 if (year) year.textContent = new Date().getFullYear();
 
 const roles = [
-  "robotics engineer.",
-  "machine learning engineer.",
-  "software developer.",
-  "builder of autonomous systems."
+  "mechanical engineer.",
+  "product designer",
+  "manufacturing engineer",
+  "builder of electromechanical systems."
 ];
 
 const typedRole = document.querySelector("#typed-role");
