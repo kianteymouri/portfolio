@@ -492,3 +492,86 @@ button { font: inherit; }
   .woodworking-image-grid img { height: 245px; }
   .woodworking-image-grid img + img { border-left: 0; border-top: 1px solid var(--line); }
 }
+
+/* Other / document projects */
+.document-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.document-project-card {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 24px;
+  align-items: start;
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.document-project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.document-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 82px;
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--text);
+  color: var(--accent);
+  font: 700 .78rem "Space Mono", monospace;
+  letter-spacing: .08em;
+}
+
+.document-icon::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 20px;
+  height: 20px;
+  border-left: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
+  background: var(--bg);
+}
+
+.document-project-copy h2 {
+  margin: 7px 0 14px;
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+  letter-spacing: -.035em;
+}
+
+.document-project-copy > p:not(.project-type) {
+  margin: 0 0 24px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.document-button {
+  min-width: 0;
+  min-height: 42px;
+  padding: 10px 14px;
+  font-size: .68rem;
+}
+
+@media (max-width: 760px) {
+  .document-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .document-project-card {
+    grid-template-columns: 72px 1fr;
+    gap: 18px;
+  }
+
+  .document-icon {
+    width: 68px;
+  }
+}
+
